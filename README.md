@@ -47,5 +47,4 @@ Import-Csv "C:\AllViews.csv" | ForEach-Object {
     $ViewType = $_.ViewType  
     $SetAsDefault = $_.SetAsDefault 
     Add-PnPView -List "Destination List" -Title $Title -Fields $Fields -Query $Query -RowLimit $RowLimit -ViewType $ViewType
-
 }
