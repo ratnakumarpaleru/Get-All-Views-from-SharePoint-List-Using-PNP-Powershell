@@ -28,7 +28,7 @@ foreach($View in $allViews)
 $Results| Export-Csv "C:\AllViews.csv" -NoTypeInformation
 
 ####################################################
-######## Creatign Views using the CSV File #########
+######## Creating Views using the CSV File #########
 ####################################################
 
 Connect-PnPOnline -Url "Destination URL" -UseWebLogin
