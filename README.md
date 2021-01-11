@@ -1,3 +1,8 @@
+####################################################
+####### Getting all the views into CSV File ########
+####################################################
+
+
 Connect-PnPOnline -Url "Sourse Site" -UseWebLogin
 
 $allViews = Get-PnPView -List "Sourse List"
@@ -21,6 +26,10 @@ foreach($View in $allViews)
    $Results += $SCRows 
    }
 $Results| Export-Csv "C:\AllViews.csv" -NoTypeInformation
+
+####################################################
+######## Creatign Views using the CSV File #########
+####################################################
 
 Connect-PnPOnline -Url "Destination URL" -UseWebLogin
 
